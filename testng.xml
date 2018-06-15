@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="suite" parallel="tests" thread-count="2">
+
+    <test name ="ChromeTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="energyManage.gaugeManage.GaugeManage">
+                <methods>
+                    <include name="dianFilters"/>
+
+                    <include name="shuiFilters"/>
+                    <include name="ranFilters"/>
+                    <include name="reFilters"/>
+                </methods>
+            </class>
+
+            <class name="equipmentManage.EquipmentManage">
+                <methods>
+                    <include name="equi1"/>
+                    <include name="equi2"/>
+                    <include name="equi3"/>
+                    <include name="equi4"/>
+                    <include name="equi5"/>
+                </methods>
+            </class>
+            <class name="loginfunction.Login">
+                <methods>
+                    <include name="loginFunction"/>
+                </methods>
+            </class>
+            <class name="modelManage.uploadModel.DirectoryOperation">
+                <methods>
+                    <include name="dir1"/>
+                    <include name="dir2"/>
+                    <include name="dir3"/>
+                    <include name="dir3_1"/>
+                    <include name="dir3_2"/>
+                    <include name="dir3_3"/>
+                    <include name="dir3_4"/>
+                    <include name="dir4"/>
+                    <include name="dir5"/>
+                    <include name="dir6"/>
+                    <include name="dir7"/>
+                    <include name="dir8"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name ="FirefoxTest">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="energyManage.gaugeManage.GaugeManage">
+                <methods>
+                    <include name="dianFilters"/>
+
+                    <include name="shuiFilters"/>
+                    <include name="ranFilters"/>
+                    <include name="reFilters"/>
+                </methods>
+            </class>
+
+            <class name="equipmentManage.EquipmentManage">
+                <methods>
+                    <include name="equi1"/>
+                    <include name="equi2"/>
+                    <include name="equi3"/>
+                    <include name="equi4"/>
+                    <include name="equi5"/>
+                </methods>
+            </class>
+            <class name="loginfunction.Login">
+                <methods>
+                    <include name="loginFunction"/>
+                </methods>
+            </class>
+            <class name="modelManage.uploadModel.DirectoryOperation">
+                <methods>
+                    <include name="dir1"/>
+                    <include name="dir2"/>
+                    <include name="dir3"/>
+                    <include name="dir3_1"/>
+                    <include name="dir3_2"/>
+                    <include name="dir3_3"/>
+                    <include name="dir3_4"/>
+                    <include name="dir4"/>
+                    <include name="dir5"/>
+                    <include name="dir6"/>
+                    <include name="dir7"/>
+                    <include name="dir8"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+<!--
+    <test name ="IE">
+        <parameter name="browser" value="IE"/>
+        <classes>
+            <class name="energyManage.gaugeManage.GaugeManage">
+                <methods>
+                    <include name="dianFilters"/>
+
+                    <include name="shuiFilters"/>
+                    <include name="ranFilters"/>
+                    <include name="reFilters"/>
+                </methods>
+            </class>
+
+            <class name="equipmentManage.EquipmentManage">
+                <methods>
+                    <include name="equi1"/>
+                    <include name="equi2"/>
+                    <include name="equi3"/>
+                    <include name="equi4"/>
+                    <include name="equi5"/>
+                </methods>
+            </class>
+            <class name="loginfunction.Login">
+                <methods>
+                    <include name="loginFunction"/>
+                </methods>
+            </class>
+            <class name="modelManage.uploadModel.DirectoryOperation">
+                <methods>
+                    <include name="dir1"/>
+                    <include name="dir2"/>
+                    <include name="dir3"/>
+                    <include name="dir3_1"/>
+                    <include name="dir3_2"/>
+                    <include name="dir3_3"/>
+                    <include name="dir3_4"/>
+                    <include name="dir4"/>
+                    <include name="dir5"/>
+                    <include name="dir6"/>
+                    <include name="dir7"/>
+                    <include name="dir8"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name ="SafariTest">
+        <parameter name="browser" value="safari"/>
+        <classes>
+            <class name="energyManage.gaugeManage.GaugeManage">
+                <methods>
+                    <include name="dianFilters"/>
+
+                    <include name="shuiFilters"/>
+                    <include name="ranFilters"/>
+                    <include name="reFilters"/>
+                </methods>
+            </class>
+
+            <class name="equipmentManage.EquipmentManage">
+                <methods>
+                    <include name="equi1"/>
+                    <include name="equi2"/>
+                    <include name="equi3"/>
+                    <include name="equi4"/>
+                    <include name="equi5"/>
+                </methods>
+            </class>
+            <class name="loginfunction.Login">
+                <methods>
+                    <include name="loginFunction"/>
+                </methods>
+            </class>
+            <class name="modelManage.uploadModel.DirectoryOperation">
+                <methods>
+                    <include name="dir1"/>
+                    <include name="dir2"/>
+                    <include name="dir3"/>
+                    <include name="dir3_1"/>
+                    <include name="dir3_2"/>
+                    <include name="dir3_3"/>
+                    <include name="dir3_4"/>
+                    <include name="dir4"/>
+                    <include name="dir5"/>
+                    <include name="dir6"/>
+                    <include name="dir7"/>
+                    <include name="dir8"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+-->
+
+</suite>
