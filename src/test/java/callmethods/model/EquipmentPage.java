@@ -60,40 +60,31 @@ public class EquipmentPage extends EquipmentManage{
     public WebElement runningStatusDropDown;
 
     //运行状态选项列表(其实是弹框的标题)
-    @FindBy(xpath = "//s[text()='设备设施运行状态']")
+    @FindBy(xpath = "//s[text()='xxx']")
     @CacheLookup
     public WebElement runningPanel;
 
-    //设备运行状态全选复选框
-    @FindBy( xpath = "//h3[contains(text(),'设备运行状态')]/label/span/input")
+    @FindBy( xpath = "//h3[contains(text(),'xxxx')]/label/span/input")
     @CacheLookup
     public WebElement AllSelectForEquipmentStatus;
 
-    //设备运行状态选项列表
-    //@FindBy(xpath = "//div[@class='checkbox'][1]/div/div/label")
-    @FindBy(xpath = "//div[@class='modal_text']/div/div[1]/div/div/label")
+    @FindBy(xpath = "//div[@class='xxxxx']/div/div[1]/div/div/label")
     @CacheLookup
     public List<WebElement> equipmentStatusCheckBoxs;
 
-    //计量表运行状态全选复选框
-    @FindBy( xpath = "//h3[contains(text(),'计量表运行状态')]/label/span/input")
+    @FindBy( xpath = "//h3[contains(text(),'xxxxx')]/label/span/input")
     @CacheLookup
     public WebElement AllSelectForGaugetableStatus;
 
-    //设备运行状态选项列表
-    //@FindBy(xpath = "//div[@class='checkbox'][2]/div/div/label")
-    @FindBy(xpath = "//div[@class='modal_text']/div/div[2]/div/div/label")
+    @FindBy(xpath = "//div[@class='xxxxx']/div/div[2]/div/div/label")
     @CacheLookup
     public List<WebElement> gaugeTableStatusCheckBoxs;
 
-    //设施运行状态全选复选框
-    @FindBy( xpath = "//h3[contains(text(),'设施运行状态')]/label/span/input")
+    @FindBy( xpath = "//h3[contains(text(),'xxxx')]/label/span/input")
     @CacheLookup
     public WebElement AllSelectForfacilityStatus;
 
-    //设施运行状态选项列表
-    //@FindBy(xpath = "//div[@class='checkbox'][3]/div/div/label")
-    @FindBy(xpath = "//div[@class='modal_text']/div/div[3]/div/div/label")
+    @FindBy(xpath = "//div[@class='xxxxx']/div/div[3]/div/div/label")
     @CacheLookup
     public List<WebElement> facilityStatusCheckBoxs;
 
@@ -174,7 +165,6 @@ public class EquipmentPage extends EquipmentManage{
             e.printStackTrace();
         }
 
-        //设备运行状态选择任意一个选项
         int index = new Random().nextInt(6);
         System.out.println("当前得到的 Index 是: "+index);
         //equip.equipmentStatusCheckBoxs.get(index).click();
@@ -193,7 +183,6 @@ public class EquipmentPage extends EquipmentManage{
             e.printStackTrace();
         }
 
-        //计量表运行状态选择任意一个选项
         int index2 = new Random().nextInt(14);
         System.out.println("当前得到的 Index 是: "+index2);
 //        equip.gaugeTableStatusCheckBoxs.get(index).click();
@@ -203,7 +192,6 @@ public class EquipmentPage extends EquipmentManage{
         String selectedGauge =gaugeTableStatusCheckBoxs.get(1).getText();
         System.out.println("选中的选项是: 安装");
 
-        //设施运行状态复选列表,取消全选
         try{
             if (AllSelectForfacilityStatus.isSelected()){
                 AllSelectForfacilityStatus.click();
@@ -212,7 +200,6 @@ public class EquipmentPage extends EquipmentManage{
             e.printStackTrace();
         }
 
-        //计量表运行状态选择任意一个选项
         int index3 = new Random().nextInt(6);
         System.out.println("当前得到的 Index 是: "+index3);
         facilityStatusCheckBoxs.get(index).click();
@@ -231,23 +218,23 @@ public class EquipmentPage extends EquipmentManage{
             for (int i =0; i<recordList.size();i++){
                 if (recordList.get(i).findElement(By.xpath("td[4]")).getText().equals("设备")){
                     if (recordList.get(i).findElement(By.xpath("td[6]")).getText().contains(selectedEquipment)){
-                        System.out.println("第"+i+"条数据. 通过验证. 是设备类型的数据");
+                        System.out.println("第"+i+"条数据. 通过验证.");
                     }else {
-                        System.out.println("第"+i+"条数据. 没有验证. 是设备类型的数据");
+                        System.out.println("第"+i+"条数据. 没有验证.");
                         throw new CustomException("数据验证没有通过啊");
                     }
                 } else if (recordList.get(i).findElement(By.xpath("td[4]")).getText().equals("计量表")){
                     if (recordList.get(i).findElement(By.xpath("td[6]")).getText().contains(selectedGauge)){
-                        System.out.println("第"+i+"条数据. 通过验证. 是计量表类型的数据");
+                        System.out.println("第"+i+"条数据. 通过验证.");
                     }else {
-                        System.out.println("第"+i+"条数据. 没有验证. 是计量表类型的数据");
+                        System.out.println("第"+i+"条数据. 没有验证. ");
                         throw new CustomException("数据验证没有通过啊");
                     }
                 }else  if(recordList.get(i).findElement(By.xpath("td[4]")).getText().equals("设施")){
                     if (recordList.get(i).findElement(By.xpath("td[6]")).getText().contains(selectedFacility)){
-                        System.out.println("第"+i+"条数据. 通过验证. 是计量表类型的数据");
+                        System.out.println("第"+i+"条数据. 通过验证.");
                     }else {
-                        System.out.println("第"+i+"条数据. 没有验证. 是计量表类型的数据");
+                        System.out.println("第"+i+"条数据. 没有验证.");
                         throw new CustomException("数据验证没有通过啊");
                     }
                 }else {
@@ -284,8 +271,8 @@ public class EquipmentPage extends EquipmentManage{
         WebElement attributeOfCurrect = recordList.get(index).findElement(By.xpath("td[7]"));
         attributeOfCurrect.click();
         //判断设备名称是否显示正确
-        Assert.assertEquals(QRCodedailog.get(0).getText(),"设备名称："+recordList.get(index).findElement(By.xpath("td[3]")).getText());
-        Assert.assertEquals(QRCodedailog.get(1).getText(),"设备编码："+recordList.get(index).findElement(By.xpath("td[2]")).getText());
+        Assert.assertEquals(QRCodedailog.get(0).getText(),"xxx名称："+recordList.get(index).findElement(By.xpath("td[3]")).getText());
+        Assert.assertEquals(QRCodedailog.get(1).getText(),"xxx编码："+recordList.get(index).findElement(By.xpath("td[2]")).getText());
 
         RQcode.isSelected(); //判断二维码是否显示
         printQRcodeButton.click();  //点击打印二维码按钮
@@ -337,7 +324,7 @@ public class EquipmentPage extends EquipmentManage{
 
 
         //根据 className 判断概述 tab 是否被选中
-        Assert.assertEquals(overView.getAttribute("class"),"router-link-exact-active active");
+        Assert.assertEquals(overView.getAttribute("class"),"active");
 
         System.out.println("======数据的基本信息=======");
         try {

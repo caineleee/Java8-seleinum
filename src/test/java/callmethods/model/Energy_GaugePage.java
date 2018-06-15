@@ -24,22 +24,22 @@ public class Energy_GaugePage {
     @FindBy(xpath = "//button[text()='xxx']")
     public WebElement reButton;
 //==================================================
-    @FindBy(xpath = "//span[text()='付费方式']/following::div[1]/div[1]/i[2]")
+    @FindBy(xpath = "//span[text()='xxxx']/following::div[1]/div[1]/i[2]")
     public WebElement payWayFilter;
 
-    @FindBy(xpath = "//span[text()='付费方式']/following::div[1]/div[2]/ul[@class='ivu-select-dropdown-list']/li")
+    @FindBy(xpath = "//span[text()='xxxx']/following::div[1]/div[2]/ul[@class='ivu-select-dropdown-list']/li")
     public List<WebElement> payWayOptions;
 
-    @FindBy(xpath = "//span[text()='抄表方式']/following::div[1]/div[1]/i[2]")
+    @FindBy(xpath = "//span[text()='xxxx']/following::div[1]/div[1]/i[2]")
     public WebElement meterReadingWayFilter;
 
-    @FindBy(xpath = "//span[text()='抄表方式']/following::div[1]/div[2]/ul[@class='ivu-select-dropdown-list']/li")
+    @FindBy(xpath = "//span[text()='xxxx']/following::div[1]/div[2]/ul[@class='ivu-select-dropdown-list']/li")
     public List<WebElement> meterReadingWayOptions;
 
-    @FindBy(xpath = "//span[text()='计价类型']/following::div[1]/div[1]/i[2]")
+    @FindBy(xpath = "//span[text()='xxxx']/following::div[1]/div[1]/i[2]")
     public WebElement valuationFilter;
 
-    @FindBy(xpath = "//span[text()='计价类型']/following::div[1]/div[2]/ul[@class='ivu-select-dropdown-list']/li")
+    @FindBy(xpath = "//span[text()='xxxx']/following::div[1]/div[2]/ul[@class='ivu-select-dropdown-list']/li")
     public List<WebElement> valuationCatOptions;
 
     @FindBy(xpath = "//span[@class='pdl']/input")
@@ -184,9 +184,6 @@ public class Energy_GaugePage {
     @FindBy(xpath = "//div[@class='basic']/span")
     public List<WebElement> valueOfField;
 
-    //详情页的返回按钮
-    //@FindBy(xpath = "//a[contains(@class,'vu-icon-arrow-return-left')]")
-    //@FindBy(xpath = "span[text()='返回']/following-sibling::i")
     @FindBy(css = "i[class='ivu-icon ivu-icon-arrow-return-left']")
     public  WebElement backButton;
 

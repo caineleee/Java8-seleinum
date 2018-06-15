@@ -43,7 +43,6 @@ public class DirectoryPage {
     public WebElement reNameTextBox;
 
     //放弃添加新文件夹按钮
-    //@FindBy(className = "//label[@title='删除]")
     @FindBy(className = "pro_history_delfolder")
     @CacheLookup
     public WebElement cancelAddButton;
@@ -55,7 +54,6 @@ public class DirectoryPage {
 
     //重命名文件名确定按钮
     @FindBy(xpath = "//div[@class='ivu-checkbox-group']/div[1]/span[2]/label[1]")
-    //@FindBy(xpath = "//label[@title='保存']")
     @CacheLookup
     public WebElement confimRenameButton;
 
@@ -69,7 +67,6 @@ public class DirectoryPage {
     public WebElement listButton;
 
     //平铺功能按钮
-    //@FindBy(xpath = "i[@title='图标列表'][@class='iconfont']")
     @FindBy(xpath = "id('app')/div[1]/div[3]/div[1]/div[3]/div[2]/div[1]/ul[1]/li[4]/i[1]")
     public WebElement iconListButton;
 
